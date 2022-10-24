@@ -28,9 +28,10 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
 import RequestItem from '../../components/requests/RequestItem.vue';
 
-export default {
+export default defineComponent({
   components: {
     RequestItem,
   },
@@ -66,7 +67,7 @@ export default {
       this.error = '';
     },
   },
-};
+});
 </script>
 
 <style scoped>

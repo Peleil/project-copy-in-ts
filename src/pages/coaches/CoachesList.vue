@@ -71,7 +71,7 @@ export default defineComponent({
     };
   },
   computed: {
-    isCoach() {
+    isCoach(): boolean {
       return this.$store.getters['coaches/isCoach'];
     },
     filteredCoaches() {
@@ -89,7 +89,7 @@ export default defineComponent({
         return false;
       });
     },
-    hasCoaches() {
+    hasCoaches(): boolean {
       return !this.isLoading && this.$store.getters['coaches/hasCoaches'];
     },
   },

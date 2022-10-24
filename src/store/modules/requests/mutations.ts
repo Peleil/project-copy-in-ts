@@ -1,13 +1,14 @@
-interface state {
-  requests: request[];
-}
-interface request {}
+import { defineComponent } from 'vue';
 
-export default {
-  addRequest(state: state, payload: request) {
+interface state {
+  requests: unknown[];
+}
+
+export default defineComponent({
+  addRequest(state: state, payload: unknown) {
     state.requests.push(payload);
   },
-  setRequests(state: state, payload: request[]) {
+  setRequests(state: state, payload: unknown[]) {
     state.requests = payload;
   },
-};
+});

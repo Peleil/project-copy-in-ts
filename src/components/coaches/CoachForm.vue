@@ -80,7 +80,9 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   emits: ['save-data'],
   data() {
     return {
@@ -152,7 +154,7 @@ export default {
       this.$emit('save-data', formData);
     },
   },
-};
+});
 </script>
 
 <style scoped>

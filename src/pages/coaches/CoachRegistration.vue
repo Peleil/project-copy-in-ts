@@ -9,6 +9,7 @@
 
 <script lang="ts">
 import CoachForm from '../../components/coaches/CoachForm.vue';
+import { defineComponent } from 'vue';
 
 interface data {
   firstName: string;
@@ -19,7 +20,7 @@ interface data {
   id?: string;
 }
 
-export default {
+export default defineComponent({
   components: {
     CoachForm,
   },
@@ -29,5 +30,5 @@ export default {
       this.$router.replace('/coaches');
     },
   },
-};
+});
 </script>

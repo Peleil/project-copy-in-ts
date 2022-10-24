@@ -20,7 +20,9 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   props: ['id', 'firstName', 'lastName', 'rate', 'areas'],
   computed: {
     fullName() {
@@ -33,7 +35,7 @@ export default {
       return this.$route.path + '/' + this.id; // /coaches/c1
     },
   },
-};
+});
 </script>
 
 <style scoped>
